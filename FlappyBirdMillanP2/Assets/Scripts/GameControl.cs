@@ -8,13 +8,14 @@ public class GameControl : MonoBehaviour
     public static GameControl instance;
     public GameObject gameOverText;
     public bool gameOver = false;
+    public float scrollspeed = -1.5f;
+
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
-        }
-        else if (instance != this)
+        }else if (instance != this)
         {
             Destroy(gameObject);
         }
@@ -35,12 +36,4 @@ public class GameControl : MonoBehaviour
         gameOver = true;
         
     }
-
-
-
-
-
-
-
-
 }
